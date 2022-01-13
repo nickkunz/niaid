@@ -1,19 +1,15 @@
 # NIAID DIR Laboratory Descriptions Data Set
-This repo creates a data set of the National Institute of Allergy or Infectious Diseases (NIAID) Division of Intramural Research (DIR) organizational structure. The data set was created for later consumption into a Neo4j graph representation and subsequently integrated into the PubMed Knowledge Graph (PKG) for further analyses. To that end, the script outputs a CSV. In order to obtain the data, this repo utilizes web scraping directly from the information found in the NIAID DIR Laboratory Descriptions (https://www.niaid.nih.gov/research/division-intramural-research-labs). It includes the following features of substantive interest.
+This repo creates a data set of the National Institute of Allergy or Infectious Diseases (NIAID) Division of Intramural Research (DIR) organizational structure. The data set was created for later consumption into a Neo4j graph representation and subsequently integrated into the PubMed Knowledge Graph (PKG) for further analyses. To that end, the script outputs a CSV. In order to obtain the data, this repo utilizes web scraping directly from the information found in the NIAID DIR Laboratory Descriptions. It includes the following features of substantive interest.
 
 _**Date:** Jan 2022_
 
 _**Contact:** Nick Kunz, Deloitte Consulting LLP (nkunz@deloitte.com)_
-
-<br>
 
 ## Data Features
 1. **Name:** Name of the principal investigators, staff scientists, and staff clinicians. There are 180 unique names.
 2.  **Education:** Research and training credentials for each name. There are 15 unique credentials.
 3. **Branch:** The branch name nested within the DIR. There are 20 unique branches.
 4. **Section:** The section/unit name nested within its respective branch. There are 162 unique sections.
-
-<br>
 
 ## Dependencies
 1. **Python** (3.8.2): Language
@@ -24,8 +20,6 @@ _**Contact:** Nick Kunz, Deloitte Consulting LLP (nkunz@deloitte.com)_
 5. **GeckoDriver** (0.30.0): WebDriver utilized in Selenium 
 
 _Note: All dependencies are installed automatically when running as a Docker Container. However, if executed as a Jupyter Notebook, these dependencies will need to be installed manually._
-
-<br>
 
 ## Getting Started
 
@@ -116,8 +110,6 @@ The first is with a **Docker Container** (highly recommended). The second is wit
     memory usage: 7.2+ KB
     ```
     At this time, web scraping is complete and the NIAID DIR data set should appear in the specified path on your local machine (```<path on host machine>/niaid-dir-org.csv```).
-
-<br>
 
 ## References
 National Institute of Allergy and Infectious Diseases. (Nov. 2021). Division of Intramural Research Laboratory Descriptions. https://www.niaid.nih.gov/research/division-intramural-research-labs. [Accessed: Jan. 2022]
