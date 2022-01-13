@@ -10,8 +10,8 @@ from extractor import section_processor
 from namer import name_processor
 
 
-## web scapper
-def data_scrapper(feats, driver, url, anch_a = 354, anch_b = 374, n = 3, t = 30):
+## web scaper
+def data_scraper(feats, driver, url, anch_a = 354, anch_b = 374, n = 3, t = 30):
 
     """
     Desc:

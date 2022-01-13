@@ -2,8 +2,8 @@
 from selenium import webdriver
 from driver import driver_options
 from driver import driver_profile
-from scrapper import data_scrapper
-from scrapper import data_cleaner
+from source.scraper import data_scraper
+from source.scraper import data_cleaner
 
 
 ## -- local machine input -- ##
@@ -42,7 +42,7 @@ feats = tuple((
 )
 
 ## web scraping and processing
-data = data_scrapper(
+data = data_scraper(
     feats = feats,
     driver = driver,
     url = 'https://www.niaid.nih.gov/research/division-intramural-research-labs',
