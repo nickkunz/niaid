@@ -95,8 +95,8 @@ The first is with a **Docker Container** (highly recommended). The second is wit
 
 4. Specify the GeckoDriver executable path and data set output path on your local machine with the block of code found in the **Execution** section of the notebook (near the bottom).
     ```
-    exe_path = '../geckodriver.exe'
-    csv_path = '../niaid-dir-org.csv'
+    exe_path = './geckodriver.exe'
+    csv_path = '../data/niaid-dir-org.csv'
     ```
 
 5. Run all blocks. The **Execution** block should return of the following upon successful completion.
