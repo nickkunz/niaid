@@ -63,17 +63,22 @@ The first is with a **Docker Container** (highly recommended). The second is wit
 
 ### Juypter Notebook
 
-1. Ensure that Python 3 is installed on your local machine. If not, you can download it here: 
+1. Ensure that Python 3.8.2 is installed on your local machine. If not, you can download it here: 
 
-    https://www.python.org/downloads/
+    https://www.python.org/downloads/release/python-382/
 
-2. Ensure that the required Python 3 libraries are installed on your local machine with the correct versions.
+2. Ensure that the required libraries are installed on your local machine with the correct versions.
 
     ```
     pip install pandas==1.2.4
     pip install requests==2.26.0
     pip install selenium==3.141.0
     pip install tqdm==4.61.2
+    ```
+
+    Alternatively, you can install them using ```requirements.txt```.
+    ```
+    py -3.8 -m pip install -r requirements.txt
     ```
 
 3. Ensure that an executable GeckoDriver is installed on your local machine. If not, you can download it here:
