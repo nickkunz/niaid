@@ -4,8 +4,8 @@ def first_namer(data, feat):
     """
     Desc:
         Addresses 'Name' feature. Performs ad hoc changes to abbreviated or 
-        otherwise misspelled first names. This function should evolve when
-        errors in first names are recognized.
+        otherwise misspelled first names. This function should evolve when 
+        errors in first names are recognized or improved info.
      
     Args:
         data (df): A valid DataFrame.
@@ -84,6 +84,26 @@ def middle_namer(data, feat):
 
         else:
             pass
+    
+    ## individual name corrections
+    feat_repl = {
+
+        ## middle initial inclusion, slight abuse of original purpose
+        ## info: https://ned.nih.gov/search/
+        feat: {
+            'Elizabeth Fischer': 'Elizabeth R Fischer', 
+            'David Sacks': 'David L Sacks',
+            'Daniella Schwartz': 'Daniella M Schwartz',
+            'Richard Davey': 'Richard T Davey',
+            'Louis Miller': 'Louis H Miller',
+            'Catharine Bosio': 'Catharine M Bosio'
+        }
+    }
+
+    data.replace(
+        to_replace = feat_repl,
+        inplace = True
+    )
 
     ## remove duplicates
     data.drop_duplicates(
@@ -220,4 +240,3 @@ def name_processor(data, feat, reap):
     )
 
     return data
-
