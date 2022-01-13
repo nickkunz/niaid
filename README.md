@@ -85,7 +85,7 @@ The first is with a **Docker Container** (highly recommended). The second is wit
 
     https://github.com/mozilla/geckodriver/releases
 
-    Alternatively, if your local machine is Windows, you can enable GeckoDriver auto download by uncommenting the following block of code located in the **Execution** section of the notebook (near the bottom).
+    Alternatively, if your local machine is running Windows, you can enable GeckoDriver auto download by uncommenting the following block of code located in the **Execution** section of the notebook (near the bottom).
 
     ```
     gecko_downloader(os = 'win64')
@@ -93,13 +93,13 @@ The first is with a **Docker Container** (highly recommended). The second is wit
 
     _Note: Notebook only supports GeckoDriver auto download on Windows machines. If you are running Linux or Mac, you will need to download GeckoDriver and specify its excutable path manually. Also, requires Python kernel to accept web requests._
 
-4. Specify the GeckoDriver executable path and data set output path on your local machine with the block of code found in the **Execution** section of the notebook (near the bottom).
+4. Specify the GeckoDriver executable path and data set output path on your local machine with the code block found in the **Execution** section of the notebook (near the bottom).
     ```
     exe_path = './geckodriver.exe'
     csv_path = '../data/niaid-dir-org.csv'
     ```
 
-5. Run all blocks. The **Execution** block should return of the following upon successful completion.
+5. Run all code blocks. The **Execution** block should return of the following upon successful completion.
 
     ```
     <class 'pandas.core.frame.DataFrame'>
