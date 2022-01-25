@@ -2,8 +2,8 @@
 from selenium import webdriver
 from driver import driver_options
 from driver import driver_profile
-from source.scraper import data_scraper
-from source.scraper import data_cleaner
+from scraper import data_scraper
+from scraper import data_cleaner
 
 
 ## -- local machine input -- ##

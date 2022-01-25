@@ -19,9 +19,18 @@ def first_namer(data, feat):
     """
 
     ## individual name corrections
-    data[feat].replace(
-        to_replace = 'Beth Fischer',
-        value = 'Elizabeth Fischer',
+    feat_repl = {
+
+        ## slight abuse of original purpose
+        ## info: https://ned.nih.gov/search/
+        feat: {
+            'Beth Fischer': 'Elizabeth Fischer',
+            'David Hackstadt': 'Ted Hackstadt',
+        }
+    }
+
+    data.replace(
+        to_replace = feat_repl,
         inplace = True
     )
 
@@ -88,7 +97,7 @@ def middle_namer(data, feat):
     ## individual name corrections
     feat_repl = {
 
-        ## middle initial inclusion, slight abuse of original purpose
+        ## slight abuse of original purpose
         ## info: https://ned.nih.gov/search/
         feat: {
             'Elizabeth Fischer': 'Elizabeth R Fischer', 
@@ -188,6 +197,23 @@ def last_namer(data, feat, reap = 3):
 
         else:
             pass
+
+
+    ## individual name corrections
+    feat_repl = {
+
+        ## slight abuse of original purpose
+        ## info: https://ned.nih.gov/search/
+        feat: {
+            'Jennifer M Cuellar-Rodriguez': 'Jennifer M Cuellar-Rodríguez',
+            'Sumati Ragagopalan': 'Sumati Rajagopalan'
+        }
+    }
+
+    data.replace(
+        to_replace = feat_repl,
+        inplace = True
+    )
 
     return data
 
