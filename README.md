@@ -1,5 +1,5 @@
 # NIAID DIR Laboratory Descriptions & Section Similarity
-This repo is the implementation guide for building a novel data set of the National Institute of Allergy and Infectious Diseases (NIAID) Division of Intramural Research (DIR) organizational structure and integrating it into the PubMed Knowledge Graph (PKG) Graph DB for constructing a similarity matrix of lab sections based on 7 dimensions of similarity.
+This repo is the implementation guide for building a novel data set of the National Institute of Allergy and Infectious Diseases (NIAID) Division of Intramural Research (DIR) organizational structure and integrating it into a PubMed Knowledge Graph (PKG) Graph DB for constructing a similarity matrix of lab sections based on 7 dimensions of similarity.
 
 Broadly, there are 3 main phases conducted in this analysis. They are the following:
 
@@ -23,8 +23,6 @@ _**Contacts:**_
 * _Elene Nakas, Deloitte Consulting LLP (enakas@deloitte.com)_
 
 _**Date:** Feb 2022_
-
-<br><br>
 
 # 1. NIAID DIR Data Set
  The first phase of the analysis creates a novel data set of the NIAID DIR organizational structure. It was created for later consumption into Neo4j and subsequently integrated into a PubMed Knowledge Graph (PKG) Graph DB for further analyses. To that end, the script outputs a CSV. In order to obtain the data, this repo utilizes web scraping directly from the information found in the NIAID DIR Laboratory Descriptions. It includes the following features of substantive interest.
@@ -146,8 +144,6 @@ The first is with a **Docker Container** (highly recommended). The second is wit
     ```
     At this time, web scraping is complete and the NIAID DIR data set should appear in the specified path on your local machine (```<path on host machine>/niaid-dir-org.csv```).
 
-<br><br>
-
 # 2. PKG Graph DB Integration
 The second phase of the analysis integrates the NIAID DIR Data Set into an existing PubMed Knowledge Graph (PKG) Graph DB implemented in Neo4j. It assumes access to or build of the PKG into a graph representation. In this context, the PKG Graph DB was pre-built. This assumption is one of the many limitations in this implementation, as it assumes quite a lot. However, if the assumption is met, these instructions remain valid.
 
@@ -187,10 +183,8 @@ The second phase of the analysis integrates the NIAID DIR Data Set into an exist
     ![NIAID DIR Graph DB](/media/pkg-ver.png)
     At this time, NIAID DIR data set integration into the existing PKG Graph DB is complete and should be functioning for the next phase of the analysis.
 
-<br><br>
-
 # 3. NIAID DIR Section Similarity
-The third phase of the analysis conducts Jaccard Similarity using the PKG Graph DB for the 7 specified similarity metrics of substantive interest. It also concatenates the data sets produced from the table results. The data sets were combined for later transformation in to a similarity matrix for visualization and consumption. To that end, the script outputs a pairwise similarity table and two similarity matrix plots. In order to obtain the data, this notebook utilizes the CSV files that were exported from Neo4j. It includes the following features of substantive interest.
+The third phase of the analysis conducts Jaccard Similarity using the PKG Graph DB for the 7 specified similarity metrics. It also concatenates the data sets produced from the table results. The data sets were combined for transformation into a similarity matrix. To that end, the script outputs a pairwise similarity table and two similarity matrix plots. In order to obtain the data, this notebook utilizes the CSV files that were exported from Neo4j. It includes the following features of substantive interest.
 
 ## Data Features
 1. **Section A** (object): A given lab section name.
@@ -278,9 +272,7 @@ The third phase of the analysis conducts Jaccard Similarity using the PKG Graph 
 
     ![Section Similarity Matrix: Top 25](/media/sec-sim-mtx-top.png)
 
-    At this time, the NIAID DIR section similarity data concatentations, calculations, and visualizations are complete to be later utilized as presentation content.
-
-<br>
+    At this time, the NIAID DIR section similarity calculations, data concatentations, and visualizations are complete. This concludes the last phase.
 
 ## References
 National Institute of Allergy and Infectious Diseases. (Nov. 2021). Division of Intramural Research Laboratory Descriptions. https://www.niaid.nih.gov/research/division-intramural-research-labs. [Accessed: Jan. 2022]
