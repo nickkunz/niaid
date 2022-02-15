@@ -9,7 +9,7 @@ WITH s1, p1_papers, s2, collect(id(p2)) AS p2_papers
 RETURN s1.Name AS section_a, s2.Name AS section_b,
     gds.alpha.similarity.jaccard(p1_papers, p2_papers) AS paper_similarity
 ORDER BY paper_similarity DESCENDING, section_a, section_b
-// note: manual export to: ../data/neo4j-sim-exp/exp-paper.csv
+// note: manual export to: ../data/sec-sim/sec-sim-ppr.csv
 
 
 // section node similarity by paper keywords
@@ -21,7 +21,7 @@ WITH s1, k1_words, s2, collect(id(k2)) AS k2_words
 RETURN s1.Name AS section_a, s2.Name AS section_b,
     gds.alpha.similarity.jaccard(k1_words, k2_words) AS keyword_similarity
 ORDER BY keyword_similarity DESCENDING, section_a, section_b
-// note: manual export to: ../data/neo4j-sim-exp/exp-keyword.csv
+// note: manual export to: ../data/sec-sim/sec-sim-kwd.csv
 
 
 // section node similarity by paper mesh keywords
@@ -33,7 +33,7 @@ WITH s1, k1_words, s2, collect(id(k2)) AS k2_words
 RETURN s1.Name AS section_a, s2.Name AS section_b,
     gds.alpha.similarity.jaccard(k1_words, k2_words) AS mesh_similarity
 ORDER BY mesh_similarity DESCENDING, section_a, section_b
-// note: manual export to: ../data/neo4j-sim-exp/exp-mesh.csv
+// note: manual export to: ../data/sec-sim/sec-sim-msh.csv
 
 
 // section node similarity by journal titles
@@ -45,7 +45,7 @@ WITH s1, j1_titles, s2, collect(id(j2)) AS j2_titles
 RETURN s1.Name AS section_a, s2.Name AS section_b,
     gds.alpha.similarity.jaccard(j1_titles, j2_titles) AS journal_similarity
 ORDER BY journal_similarity DESCENDING, section_a, section_b
-// note: manual export to: ../data/neo4j-sim-exp/exp-journal.csv
+// note: manual export to: ../data/sec-sim/sec-sim-jrl.csv
 
 
 // section node similarity by journal categories
@@ -57,7 +57,7 @@ WITH s1, c1_tags, s2, collect(id(c2)) AS c2_tags
 RETURN s1.Name AS section_a, s2.Name AS section_b,
     gds.alpha.similarity.jaccard(c1_tags, c2_tags) AS journal_cat_similarity
 ORDER BY journal_cat_similarity DESCENDING, section_a, section_b
-// note: manual export to: ../data/neo4j-sim-exp/exp-journal-cat.csv
+// note: manual export to: ../data/sec-sim/sec-sim-jrl-cat.csv
 
 
 // name node similarity by project spending categories
@@ -69,7 +69,7 @@ WITH s1, c1_tags, s2, collect(id(c2)) AS c2_tags
 RETURN s1.Name AS section_a, s2.Name AS section_b,
     gds.alpha.similarity.jaccard(c1_tags, c2_tags) AS project_cat_similarity
 ORDER BY project_cat_similarity DESCENDING, section_a, section_b
-// note: manual export to: ../data/neo4j-sim-exp/exp-project-cat.csv
+// note: manual export to: ../data/sec-sim/sec-sim-prj-cat.csv
 
 
 // section node similarity by project terms
@@ -81,4 +81,4 @@ WITH s1, t1_terms, s2, collect(id(t2)) AS t2_terms
 RETURN s1.Name AS section_a, s2.Name AS section_b,
     gds.alpha.similarity.jaccard(t1_terms, t2_terms) AS project_term_similarity
 ORDER BY project_term_similarity DESCENDING, section_a, section_b
-// note: manual export to: ../data/neo4j-sim-exp/exp-project-term.csv
+// note: manual export to: ../data/sec-sim/sec-sim-prj-trm.csv
