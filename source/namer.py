@@ -25,7 +25,7 @@ def first_namer(data, feat):
         ## info: https://ned.nih.gov/search/
         feat: {
             'Beth Fischer': 'Elizabeth Fischer',
-            'David Hackstadt': 'Ted Hackstadt',
+            'David Hackstadt': 'Ted Hackstadt'
         }
     }
 
@@ -238,6 +238,15 @@ def name_processor(data, feat, reap):
     Raises:
         None.
     """
+
+    ## remove whitespace
+    data[feat] = data[feat].str.strip()
+
+    data.replace(
+        to_replace = {' +':' '},
+        regex = True,
+        inplace = True
+    )
 
     ## sort data by names
     data.sort_values(
