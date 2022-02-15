@@ -31,7 +31,7 @@ _**Date:** Feb 2022_
 
 ## Data Features
 1. **Name** (object): Name of the principal investigators, staff scientists, and staff clinicians. There are 180 unique names.
-2.  **Education** (object): Research and training credentials for each name. There are 15 unique credentials.
+2. **Education** (object): Research and training credentials for each name. There are 15 unique credentials.
 3. **Branch** (object): The branch name nested within the DIR. There are 20 unique branches.
 4. **Section** (object): The section/unit name nested within its respective branch. There are 162 unique sections.
 
