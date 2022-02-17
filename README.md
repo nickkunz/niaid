@@ -18,8 +18,8 @@ This repo is organized into folders. The following is a guide:
 * ```/``` : Root folder containing docs, license, dependencies, and bash script for Docker.
 
 _**Contacts:**_
+* _Dr. Joshua Porter, Deloitte Consulting LLP (joporter@deloitte.com)_
 * _Nick Kunz, Deloitte Consulting LLP (nkunz@deloitte.com)_
-* _Joshua Porter, Deloitte Consulting LLP (joporter@deloitte.com)_
 * _Elene Nakas, Deloitte Consulting LLP (enakas@deloitte.com)_
 
 _**Date:** Feb 2022_
